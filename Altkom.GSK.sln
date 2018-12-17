@@ -5,6 +5,14 @@ VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Altkom.GSK.Models", "Altkom.GSK.Models\Altkom.GSK.Models.csproj", "{C28978C7-523D-4EE8-B02A-71DC8586551F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Altkom.GSK.IServices", "Altkom.GSK.IServices\Altkom.GSK.IServices.csproj", "{041BC007-30B6-48DA-B5A5-790DE061AD94}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Altkom.GSK.FakeServices", "Altkom.GSK.FakeServices\Altkom.GSK.FakeServices.csproj", "{2BDC2EDC-727F-4749-94E2-3668ADC16A2C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Altkom.GSK.ConsoleClient", "Altkom.GSK.ConsoleClient\Altkom.GSK.ConsoleClient.csproj", "{6626EA15-476F-412B-9E62-42B475990712}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Altkom.GSK.Service", "Altkom.GSK.Service\Altkom.GSK.Service.csproj", "{2EB4ED93-BADD-4B12-97B7-0ED44EFE9148}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +23,22 @@ Global
 		{C28978C7-523D-4EE8-B02A-71DC8586551F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C28978C7-523D-4EE8-B02A-71DC8586551F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C28978C7-523D-4EE8-B02A-71DC8586551F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{041BC007-30B6-48DA-B5A5-790DE061AD94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{041BC007-30B6-48DA-B5A5-790DE061AD94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{041BC007-30B6-48DA-B5A5-790DE061AD94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{041BC007-30B6-48DA-B5A5-790DE061AD94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BDC2EDC-727F-4749-94E2-3668ADC16A2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BDC2EDC-727F-4749-94E2-3668ADC16A2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BDC2EDC-727F-4749-94E2-3668ADC16A2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BDC2EDC-727F-4749-94E2-3668ADC16A2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6626EA15-476F-412B-9E62-42B475990712}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6626EA15-476F-412B-9E62-42B475990712}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6626EA15-476F-412B-9E62-42B475990712}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6626EA15-476F-412B-9E62-42B475990712}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EB4ED93-BADD-4B12-97B7-0ED44EFE9148}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EB4ED93-BADD-4B12-97B7-0ED44EFE9148}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EB4ED93-BADD-4B12-97B7-0ED44EFE9148}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EB4ED93-BADD-4B12-97B7-0ED44EFE9148}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

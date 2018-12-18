@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Altkom.GSK.Models", "Altkom.GSK.Models\Altkom.GSK.Models.csproj", "{C28978C7-523D-4EE8-B02A-71DC8586551F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Altkom.GSK.Models", "Altkom.GSK.Models\Altkom.GSK.Models.csproj", "{C28978C7-523D-4EE8-B02A-71DC8586551F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Altkom.GSK.IServices", "Altkom.GSK.IServices\Altkom.GSK.IServices.csproj", "{041BC007-30B6-48DA-B5A5-790DE061AD94}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Altkom.GSK.IServices", "Altkom.GSK.IServices\Altkom.GSK.IServices.csproj", "{041BC007-30B6-48DA-B5A5-790DE061AD94}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Altkom.GSK.FakeServices", "Altkom.GSK.FakeServices\Altkom.GSK.FakeServices.csproj", "{2BDC2EDC-727F-4749-94E2-3668ADC16A2C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Altkom.GSK.FakeServices", "Altkom.GSK.FakeServices\Altkom.GSK.FakeServices.csproj", "{2BDC2EDC-727F-4749-94E2-3668ADC16A2C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Altkom.GSK.ConsoleClient", "Altkom.GSK.ConsoleClient\Altkom.GSK.ConsoleClient.csproj", "{6626EA15-476F-412B-9E62-42B475990712}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Altkom.GSK.ConsoleClient", "Altkom.GSK.ConsoleClient\Altkom.GSK.ConsoleClient.csproj", "{6626EA15-476F-412B-9E62-42B475990712}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Altkom.GSK.Service", "Altkom.GSK.Service\Altkom.GSK.Service.csproj", "{2EB4ED93-BADD-4B12-97B7-0ED44EFE9148}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Altkom.GSK.Service", "Altkom.GSK.Service\Altkom.GSK.Service.csproj", "{2EB4ED93-BADD-4B12-97B7-0ED44EFE9148}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Altkom.GSK.DbServices", "Altkom.GSK.DbServices\Altkom.GSK.DbServices.csproj", "{9C0A178F-8240-458C-BC09-04FBAAC23669}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{2EB4ED93-BADD-4B12-97B7-0ED44EFE9148}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2EB4ED93-BADD-4B12-97B7-0ED44EFE9148}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2EB4ED93-BADD-4B12-97B7-0ED44EFE9148}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C0A178F-8240-458C-BC09-04FBAAC23669}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C0A178F-8240-458C-BC09-04FBAAC23669}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C0A178F-8240-458C-BC09-04FBAAC23669}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C0A178F-8240-458C-BC09-04FBAAC23669}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Altkom.GSK.DbServices\Altkom.GSK.DbServices.csproj" />
     <ProjectReference Include="..\Altkom.GSK.FakeServices\Altkom.GSK.FakeServices.csproj" />
     <ProjectReference Include="..\Altkom.GSK.IServices\Altkom.GSK.IServices.csproj" />
   </ItemGroup>

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Altkom.GSK.DbServices;
 using Altkom.GSK.FakeServices;
 using Altkom.GSK.IServices;
 using Microsoft.AspNetCore.Builder;
@@ -39,7 +40,10 @@ namespace Altkom.GSK.Service
 
             string level = Configuration["Logging:LogLevel:Default"];
 
-            services.AddSingleton<IEmployeesService, FakeEmployeesService>();
+            services.AddDbContext<MyContext>();
+
+            // services.AddSingleton<IEmployeesService, FakeEmployeesService>();
+            services.AddScoped<IEmployeesService, DbEmployeesService>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }

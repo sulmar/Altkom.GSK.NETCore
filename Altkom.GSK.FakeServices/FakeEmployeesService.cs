@@ -12,14 +12,17 @@ namespace Altkom.GSK.FakeServices
     {
         private ICollection<Employee> employees;
 
-
         public FakeEmployeesService()
         {
             EmployeeFaker employeeFaker = new EmployeeFaker();
 
             employees = employeeFaker.Generate(100);
-        }   
+        }
 
+        public void Add(Employee employee)
+        {
+            employees.Add(employee);
+        }
 
         public ICollection<Employee> Get()
         {
@@ -29,6 +32,18 @@ namespace Altkom.GSK.FakeServices
         public Employee Get(int id)
         {
             return employees.SingleOrDefault(e => e.Id == id);
+        }
+
+        public Employee GetByName(string firstName)
+        {
+            return employees.FirstOrDefault(e => e.FirstName == firstName);
+        }
+
+        public void Remove(int id)
+        {
+            Employee employee = Get(id);
+
+            employees.Remove(employee);
         }
     }
 }

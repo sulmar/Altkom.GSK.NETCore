@@ -7,7 +7,9 @@ namespace Altkom.GSK.IServices
 {
     public interface IEmployeesService
     {
+        void Add(Employee employee);
         ICollection<Employee> Get();
         Employee Get(int id);
+        void Remove(int id);
     }
 }

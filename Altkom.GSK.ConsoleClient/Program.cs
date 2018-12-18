@@ -19,6 +19,8 @@ namespace Altkom.GSK.ConsoleClient
                 Console.WriteLine($"{employee.FirstName} {employee.LastName}");
             }
 
+           //var owner = employeesService.GetByName("Marcin");
+
             Console.WriteLine("Press any key to exit.");
             Console.ReadKey();
 

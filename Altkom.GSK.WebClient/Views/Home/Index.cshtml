@@ -1,0 +1,37 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Hello .NET CORE</p>
+
+
+    <input id="button" type="button" value="Send message" 
+           onclick="SendMessage()" />
+</div>
+
+<script src="~/lib/@@aspnet/signalr/dist/browser/signalr.js"></script>
+
+<script>
+    var connection = new signalR.HubConnectionBuilder()
+        .withUrl("/messages")
+        .configureLogging(signalR.LogLevel.Trace)
+        .build();
+
+    connection.on("NewMessage", function (message) {
+        console.log("received message " + message);
+    });
+
+    connection.start().catch(function (err) {
+        return console.error(err.toString());
+    });
+
+
+    function SendMessage() {
+        connection.send("Send", "Hello .NET Core");
+    }
+
+
+
+</script>

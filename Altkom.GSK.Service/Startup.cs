@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Altkom.GSK.DbServices;
 using Altkom.GSK.FakeServices;
 using Altkom.GSK.IServices;
+using Altkom.GSK.Service.Hubs;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -50,6 +51,18 @@ namespace Altkom.GSK.Service
             // services.AddSingleton<IEmployeesService, FakeEmployeesService>();
             services.AddScoped<IEmployeesService, DbEmployeesService>();
 
+            services.AddSignalR();
+
+            services.AddCors(options => options.AddPolicy("CorsPolicy",
+                builder =>
+                {
+                    builder
+                        .AllowAnyMethod()
+                        .AllowAnyHeader()
+                        .WithOrigins("https://localhost:44391")
+                        .AllowCredentials();
+                }));
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
@@ -66,7 +79,15 @@ namespace Altkom.GSK.Service
                 app.UseHsts();
             }
 
+
+            app.UseSignalR(routes =>
+            {
+                routes.MapHub<MessagesHub>("/messages");
+            });
+
             app.UseHttpsRedirection();
+
+            app.UseCors();
             app.UseMvc();
         }
     }

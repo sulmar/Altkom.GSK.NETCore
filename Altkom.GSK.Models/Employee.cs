@@ -9,14 +9,14 @@ namespace Altkom.GSK.Models
     {
         // prop
 
-        [Key]
+       // [Key]
         public int Id { get; set; }
 
-        [MaxLength(50)]
+       // [MaxLength(50)]
         public string FirstName { get; set; }
 
-        [MaxLength(50)]
-        [Required]
+        //[MaxLength(50)]
+        //[Required]
         public string LastName { get; set; }
         public decimal? Salary { get; set; }
         public DateTime? Birthday { get; set; }
@@ -24,6 +24,8 @@ namespace Altkom.GSK.Models
 
         public Employee Manager { get; set; }
         public ICollection<Device> Devices { get; set; }
-       // public ICollection<Group> Groups { get; set; }
+        // public ICollection<Group> Groups { get; set; }
+
+        public string Password  { get; set; }
     }
 }

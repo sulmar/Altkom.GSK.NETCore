@@ -1,4 +1,5 @@
-﻿using Altkom.GSK.Models;
+﻿using Altkom.GSK.DbServices.Configurations;
+using Altkom.GSK.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -13,15 +14,23 @@ namespace Altkom.GSK.DbServices
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Group> Groups { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+
+        public MyContext(DbContextOptions<MyContext> options)
+            : base(options)
         {
-            string connectionString = "Data Source=(localdb)\\MSSQLLocalDb;Initial Catalog=MyDb;Integrated Security=true;";
 
-            // Install-Package Microsoft.EntityFrameworkCore.SqlServer
-            optionsBuilder.UseSqlServer(connectionString);
+        }
+
+     
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder
+                .ApplyConfiguration(new EmployeeConfiguration())
+                .ApplyConfiguration(new GroupConfiguration());
 
 
-            base.OnConfiguring(optionsBuilder);
         }
     }
 }
